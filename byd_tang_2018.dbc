@@ -1,0 +1,95 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_:
+
+BU_: EON EON  75 half EON   9C-BC
+
+
+BO_ 287 STEERING_SENSORS: 5 EPS
+ SG_ STEER_ANGLE : 0|16@1- (0.1,0) [-650|650] "deg" EON
+ SG_ STEER_ANGLE_UNKNOWN : 16|8@1- (1,0) [-650|650] "deg/s" EON
+ SG_ COUNTER : 32|4@1+ (1,0) [0|255] "" EON
+ SG_ CHECKSUM : 36|4@1+ (1,0) [0|255] "" EON
+
+BO_ 523 LIGHT: 8 BDY
+ SG_ LIGHT : 24|4@1+ (1,0) [0|16] "" EON
+
+BO_ 301 DOORS_STATUS: 8 BDY
+ SG_ DOOR_OPEN_FL : 0|1@0+ (1,0) [0|1] "" EON
+ SG_ DOOR_OPEN_FR : 1|1@0+ (1,0) [0|1] "" EON
+ SG_ DOOR_OPEN_RL : 2|1@0+ (1,0) [0|1] "" EON
+ SG_ DOOR_OPEN_RR : 3|1@0+ (1,0) [0|1] "" EON
+ SG_ DOOR_TRUNK : 4|1@0+ (1,0) [0|1] "" EON
+ SG_ SEATBELT_DRIVER_LATCHED : 6|1@0+ (1,0) [0|1] "" EON
+ SG_ BREAK_PRESSED : 8|1@0+ (1,0) [0|1] "" EON
+
+BO_ 578 SPEED_STATUS: 8 BDY
+ SG_ SPEED : 0|16@1+ (0.017,-510) [0|255] "" EON
+
+BO_ 530 GEAR_STATUS: 8 BDY
+ SG_ BREAK_P2 : 31|8@0+ (1,0) [0|255] "" EON
+ SG_ GEAR : 15|8@0+ (1,0) [0|255] "" EON
+
+BO_ 269 POWERTRAIN: 8 BDY
+ SG_ BREAK_P3 : 55|16@0+ (1,0) [67|71] "" EON  75 half
+ SG_ ENGINE_RPM_UNKNOWN : 0|16@1- (0.25,0) [0|255] "" EON
+
+BO_ 834 GAS_POSITION: 8 BDY
+ SG_ GAS_P1 : 7|8@0+ (1,0) [0|255] "" EON
+ SG_ ECO_SPORT : 20|4@1+ (1,0) [0|255] "" EON
+ SG_ EV_HEV : 28|4@1+ (1,0) [0|255] "" EON
+
+BO_ 548 BREAK_POSITION: 8 BDY
+ SG_ BREAK_P4 : 32|16@1+ (1,0) [0|255] "" EON   9C-BC
+
+BO_ 549 BREAK_POSITION2: 8 BDY
+ SG_ BREAK_P5 : 24|16@1+ (1,0) [0|255] "" EON
+
+BO_ 860 GEAR2_STATUS: 8 BDY
+ SG_ GEAR2 : 15|8@0+ (1,0) [0|255] "" EON
+
+BO_ 665 STEERING_KEY: 8 EPS
+ SG_ STEER_KEY : 20|4@1- (1,0) [0|255] "" EON
+
+
+
+
+
+VAL_ 523 LIGHT 15 "OFF" 12 "AUTO" 9 "AUTO" 7 "NIGHT" 6 "LONG" 4 "LONG" 5 "LONG" ;
+VAL_ 530 BREAK_P2 8 "release" 12 "press" ;
+VAL_ 530 GEAR 4 "D" 3 "N" 2 "R" 1 "P" ;
+VAL_ 269 BREAK_P3 67 "release" 71 "press" 75 "half" ;
+VAL_ 834 ECO_SPORT 2 "sport" 1 "eco" ;
+VAL_ 834 EV_HEV 9 "EV" 11 "HEV" ;
+VAL_ 860 GEAR2 4 "D" 3 "N" 2 "R" 1 "P" ;
