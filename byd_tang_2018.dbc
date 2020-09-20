@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: EON EON  75 half EON   9C-BC
+BU_: EON EON 75 half EON 9C-BC EON  75 half EON   9C-BC XXX
 
 
 BO_ 287 STEERING_SENSORS: 5 EPS
@@ -58,12 +58,13 @@ BO_ 578 SPEED_STATUS: 8 BDY
  SG_ SPEED : 0|16@1+ (0.017,-510) [0|255] "" EON
 
 BO_ 530 GEAR_STATUS: 8 BDY
- SG_ BREAK_P2 : 31|8@0+ (1,0) [0|255] "" EON
  SG_ GEAR : 15|8@0+ (1,0) [0|255] "" EON
+ SG_ BREAK_P2 : 31|8@0+ (1,0) [0|255] "" EON
 
 BO_ 269 POWERTRAIN: 8 BDY
- SG_ BREAK_P3 : 55|16@0+ (1,0) [67|71] "" EON  75 half
  SG_ ENGINE_RPM_UNKNOWN : 0|16@1- (0.25,0) [0|255] "" EON
+ SG_ BREAK_P3 : 55|16@0+ (1,0) [67|71] "" EON  75 half
+ SG_ POWER : 31|8@0- (0.5,0) [0|255] "KW" XXX
 
 BO_ 834 GAS_POSITION: 8 BDY
  SG_ GAS_P1 : 7|8@0+ (1,0) [0|255] "" EON
@@ -82,13 +83,22 @@ BO_ 860 GEAR2_STATUS: 8 BDY
 BO_ 665 STEERING_KEY: 8 EPS
  SG_ STEER_KEY : 20|4@1- (1,0) [0|255] "" EON
 
+BO_ 291 NEW_MSG_1: 8 XXX
+
+BO_ 289 POWER: 8 XXX
+ SG_ POWER_0 : 0|8@1- (0.5,0) [0|255] "kw" XXX
+ SG_ NEW_SIGNAL_2 : 56|8@1- (1,0) [0|255] "" XXX
+
+BO_ 290 NEW_MSG_2: 8 XXX
+ SG_ NEW_SIGNAL_1 : 23|8@0- (1,0) [0|255] "" XXX
+
 
 
 
 
 VAL_ 523 LIGHT 15 "OFF" 12 "AUTO" 9 "AUTO" 7 "NIGHT" 6 "LONG" 4 "LONG" 5 "LONG" ;
-VAL_ 530 BREAK_P2 8 "release" 12 "press" ;
 VAL_ 530 GEAR 4 "D" 3 "N" 2 "R" 1 "P" ;
+VAL_ 530 BREAK_P2 8 "release" 12 "press" ;
 VAL_ 269 BREAK_P3 67 "release" 71 "press" 75 "half" ;
 VAL_ 834 ECO_SPORT 2 "sport" 1 "eco" ;
 VAL_ 834 EV_HEV 9 "EV" 11 "HEV" ;
